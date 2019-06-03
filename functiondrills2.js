@@ -63,3 +63,51 @@ function decode (word) {
 
 let testVar = "craft block argon meter bells brown croon droop";
 console.log(decode(testVar));
+/*
+function (month, leapYear) {
+    switch(leapYear) {
+        case leapYear:
+
+    }
+    switch(month) {
+        case "January":
+        case "March":
+        case "May":
+        case "July":
+        case "August":
+        case "September":
+        case "October":
+        case "December":
+           result = `${month} has 31 days`
+            break;
+
+        case "February":
+            result = `${month} has 28 days`
+        case "April":
+        case "June":
+        case "November":
+            result = 
+            
+        
+    }
+}
+*/
+
+function game(num) {
+    const randomNo = Math.floor(Math.random( )* 3) + 1; 
+    console.log(randomNo);
+    let choice;
+    let choiceTwo;
+    if (randomNo = 1 ){
+        choice = "rock";
+    }
+    else if(randomNo = 2){
+        choice = "scissors";
+    }
+    else {
+        choice = "paper";
+    }
+    
+}
+
+console.log(game(2))
