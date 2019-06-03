@@ -93,21 +93,44 @@ function (month, leapYear) {
 }
 */
 
-function game(num) {
-    const randomNo = Math.floor(Math.random( )* 3) + 1; 
-    console.log(randomNo);
-    let choice;
-    let choiceTwo;
-    if (randomNo = 1 ){
-        choice = "rock";
+function game(num) {        
+const randomNo = Math.floor(Math.random( )* 3) + 1; 
+let computer = randomNo;
+console.log(`The computer chose ${computer}`);
+    if (num > 3) {
+        throw new Error ("Must choose a number from 1-3");
     }
-    else if(randomNo = 2){
-        choice = "scissors";
-    }
-    else {
-        choice = "paper";
-    }
+   else if (num === computer){
+       return "you tied";
+   }
+   else if (num === 1 && computer === 2) {
+       return "rock beats scissors, you win!";
+   }
+   else if (num === 1 && computer === 3){
+       return "paper beats rock, you lose";
+   }
+   else if (num === 2 && computer === 3) {
+       return "scissors beats paper, you win!";
+   }
+   else if (num === 2 && computer === 1) {
+       return "rock beats scissors, you lose";
+}
+   else if (num === 3 && computer === 1) {
+       return "paper beats rock, you win!";
+   }
+   else if (num === 3 && computer === 2) {
+       return "scissors beats paper, you lose";
+   }
+   
     
 }
+try {
+    game(5);
 
-console.log(game(2))
+}
+catch(error) {
+    console.error(error);
+}
+const playerTest = game(3);
+console.log(playerTest);
+
