@@ -1,3 +1,4 @@
+//Drill #1
 function jediName(firstName, lastName) 
 { const newName1 = firstName.slice(0,2); 
 const newName2 = lastName.slice(0,3); 
@@ -6,6 +7,7 @@ return `${newName2}${newName1}`
 
 console.log(jediName("Ashley", "Jordon"));
 
+//Drill #2
 function beyond (num) {
     if (num === Infinity) {
        console.log("And beyond");
@@ -24,50 +26,39 @@ function beyond (num) {
 
 console.log(beyond(-5));
 
+//Drill #3
 function decode (word) {
     let resultArray = [];
-    const splitArray = word.split(" ");
-    
+    const splitArray = word.split(" ");    
    
-    for (let i= 0; i < splitArray.length; i++){
-        
+    for (let i= 0; i < splitArray.length; i++){        
         if (splitArray[i].charAt(0) === "a"){
-            resultArray.push(splitArray[i].charAt(1));          
-           
+            resultArray.push(splitArray[i].charAt(1));  
         }
         else if (splitArray[i].charAt(0) === "b"){
-            resultArray.push(splitArray[i].charAt(2));
-            
+            resultArray.push(splitArray[i].charAt(2));            
         }
         else if (splitArray[i].charAt(0) === "c"){
-            resultArray.push(splitArray[i].charAt(3));
-           
+            resultArray.push(splitArray[i].charAt(3));           
         }
         else if (splitArray[i].charAt(0) === "d"){
-            resultArray.push(splitArray[i].charAt(4));
-           
+            resultArray.push(splitArray[i].charAt(4));           
         }
-        else {
-            
-           
+        else {           
             resultArray.push(" ");
         }
     }
 
     let result = resultArray.join("");
     console.log(result);
-   
-
 }
 
 let testVar = "craft block argon meter bells brown croon droop";
 console.log(decode(testVar));
 
-/*
-function (month, leapYear) {
-    switch(leapYear) {
-        case leapYear:
-    }
+//Drill #4
+function howManyDays (month, leapYear) {
+    
     switch(month) {
         case "January":
         case "March":
@@ -77,20 +68,37 @@ function (month, leapYear) {
         case "September":
         case "October":
         case "December":
-           result = `${month} has 31 days`
+           return `${month} has 31 days`
             break;
         case "February":
-            result = `${month} has 28 days`
+            if (leapYear = true) {
+                return`${month} has 29 days`
+            }           
+            else {
+                return `${month} has 28 days`
+            }            
+            break;          
         case "April":
         case "June":
         case "November":
-            result = 
-            
+            return `${month} has 30 days`
+            break;
+        default: 
+        throw new Error("Must provide a valid month");            
         
     }
+   
 }
-*/
+try {
+    howManyDays("hello");
+}
+catch(error){
+    console.error(error);
+}
+console.log(howManyDays("February", true));
+console.log(howManyDays("June"));
 
+//Drill #5
 function game(num) {        
 const computer = Math.floor(Math.random( )* 3) + 1; 
 console.log(`The computer chose ${computer}`);
@@ -128,5 +136,4 @@ catch(error) {
 }
 const playerTest = game(3);
 console.log(playerTest);
-
 
