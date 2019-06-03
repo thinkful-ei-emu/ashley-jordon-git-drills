@@ -1,0 +1,66 @@
+function game(num) {
+    const computer = Math.floor(Math.random() * 3) + 1;
+    let choice1;
+    let choice2;
+
+    if(computer == 1){
+        choice2 = "rock";
+    } else if (computer == 2){
+        choice2 = "paper";
+    } else {
+        choice2 = "scissors";
+    }
+
+    if (num == 1){
+        choice1 = "rock"
+    }else if (num == 2){
+        choice1 = "paper"
+    }else {
+        choice1 = "scissors"
+    }
+
+
+if (choice1 == choice2){
+        return "Tie!";
+    }
+
+if(choice1 === "paper"){
+    if(choice2 === "rock"){
+        return "Paper(YOU) Wins!"
+    }
+}
+
+if(choice1 === "paper"){
+    if(choice2 === "scissors"){
+        return "Scissors(BOT) Wins"
+    }
+}
+
+if (choice1 === "rock"){
+    if (choice2 === "paper"){
+        return "Paper(BOT) Wins!"
+    }
+}
+
+if (choice1 === "rock"){
+    if (choice2 === "scissors"){
+        return "Rock(YOU) Wins!";
+    }
+}
+
+if(choice1 === "scissors") {
+     if(choice2 === "rock") {
+            return "Rock(BOT) Wins!";
+    }
+}
+
+if (choice1 === "scissors"){
+    if (choice2 === "paper"){
+        return "Scissors()YOU Wins!";
+    }
+}
+
+
+}
+
+console.log(game(1));

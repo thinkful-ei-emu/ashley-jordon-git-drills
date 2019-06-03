@@ -1,4 +1,3 @@
-
 function jediName(firstName, lastName) 
 { const newName1 = firstName.slice(0,2); 
 const newName2 = lastName.slice(0,3); 
@@ -63,11 +62,11 @@ function decode (word) {
 
 let testVar = "craft block argon meter bells brown croon droop";
 console.log(decode(testVar));
+
 /*
 function (month, leapYear) {
     switch(leapYear) {
         case leapYear:
-
     }
     switch(month) {
         case "January":
@@ -80,7 +79,6 @@ function (month, leapYear) {
         case "December":
            result = `${month} has 31 days`
             break;
-
         case "February":
             result = `${month} has 28 days`
         case "April":
@@ -94,20 +92,73 @@ function (month, leapYear) {
 */
 
 function game(num) {
-    const randomNo = Math.floor(Math.random( )* 3) + 1; 
-    console.log(randomNo);
-    let choice;
-    let choiceTwo;
-    if (randomNo = 1 ){
-        choice = "rock";
+    const computer = Math.floor(Math.random() * 3) + 1;
+    let choice1;
+    let choice2;
+
+    if(computer == 1){
+        choice2 = "rock";
+    } else if (computer == 2){
+        choice2 = "paper";
+    } else {
+        choice2 = "scissors";
     }
-    else if(randomNo = 2){
-        choice = "scissors";
+
+    if (num == 1){
+        choice1 = "rock"
+    }else if (num == 2){
+        choice1 = "paper"
+    }else {
+        choice1 = "scissors"
     }
-    else {
-        choice = "paper";
+
+
+if (choice1 == choice2){
+        return "Tie!";
     }
-    
+
+if(choice1 === "paper"){
+    if(choice2 === "rock"){
+        return "Paper(YOU) Wins!"
+    }
 }
 
-console.log(game(2))
+if(choice1 === "paper"){
+    if(choice2 === "scissors"){
+        return "Scissors(BOT) Wins"
+    }
+}
+
+if (choice1 === "rock"){
+    if (choice2 === "paper"){
+        return "Paper(BOT) Wins!"
+    }
+}
+
+if (choicAe1 === "rock"){
+    if (choice2 === "scissors"){
+        return "Rock(YOU) Wins!";
+    }
+}
+
+if(choice1 === "scissors") {
+     if(choice2 === "rock") {
+            return "Rock(BOT) Wins!";
+    }
+}
+
+if (choice1 === "scissors"){
+    if (choice2 === "paper"){
+        return "Scissors(YOU) Wins!";
+    }
+}
+
+
+}
+
+// PLAYER CONTROLS
+// 1 = rock
+// 2 = paper
+// 3 = Scissors
+// ***CHANGE NUM PARAMETER BELOW ***
+console.log(game(2));
