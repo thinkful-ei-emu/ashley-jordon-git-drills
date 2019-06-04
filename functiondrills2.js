@@ -165,7 +165,7 @@ if (choice1 === "rock"){
     }
 }
 
-if (choicAe1 === "rock"){
+if (choice1 === "rock"){
     if (choice2 === "scissors"){
         return "Rock(YOU) Wins!";
     }
